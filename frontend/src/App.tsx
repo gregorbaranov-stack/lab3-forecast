@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './styles.css'
+import { TemperatureModule } from './modules/TemperatureModule'
 
 type TabKey = string
 
@@ -11,7 +12,7 @@ interface TabDef {
 
 // Общий связанный интерфейс команды.
 const TABS: TabDef[] = [
-  // TODO: участники регистрируют здесь свои модули
+  { key: 'temperature', title: 'Температура', render: () => <TemperatureModule /> },
 ]
 
 export default function App() {

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './styles.css'
+import { TemperatureModule } from './modules/TemperatureModule'
 import { CurrencyModule } from './modules/CurrencyModule'
+
 
 type TabKey = string
 
@@ -12,6 +14,7 @@ interface TabDef {
 
 // Общий связанный интерфейс команды.
 const TABS: TabDef[] = [
+  { key: 'temperature', title: 'Температура', render: () => <TemperatureModule /> },
   { key: 'currency', title: 'Курсы валют', render: () => <CurrencyModule /> },
 ]
 

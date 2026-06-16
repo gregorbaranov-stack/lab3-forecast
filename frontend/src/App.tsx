@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './styles.css'
+import { CurrencyModule } from './modules/CurrencyModule'
 
 type TabKey = string
 
@@ -11,7 +12,7 @@ interface TabDef {
 
 // Общий связанный интерфейс команды.
 const TABS: TabDef[] = [
-  // TODO: участники регистрируют здесь свои модули
+  { key: 'currency', title: 'Курсы валют', render: () => <CurrencyModule /> },
 ]
 
 export default function App() {
